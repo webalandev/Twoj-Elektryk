@@ -1,0 +1,7 @@
+{
+  "name": "ZAWISZA",
+  "description": "Twój Elektryk - Profesjonalne Usługi Elektryczne, Rozdzielnice, Pomiary SEP i Awarie. Kanie ul. Wiosenna 22, Pruszków, Warszawa. Tel: 665 448 931.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
