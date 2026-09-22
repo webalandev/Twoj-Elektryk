@@ -74,9 +74,6 @@ button {
   padding-right: clamp(1.2rem, 3.5vw, 2.5rem);
 }
 
-/* -------------------------------------------------------------
-   NAVIGATION BAR & HEADER
-------------------------------------------------------------- */
 .site-nav-bar {
   position: sticky;
   top: 0;
@@ -277,9 +274,6 @@ button {
   transition: all 0.25s ease;
 }
 
-/* -------------------------------------------------------------
-   MOBILE DRAWER MENU
-------------------------------------------------------------- */
 .mobile-drawer-overlay {
   position: fixed;
   inset: 0;
@@ -383,9 +377,6 @@ button {
   margin-top: 0.75rem;
 }
 
-/* -------------------------------------------------------------
-   HERO / SHOWCASE SECTION
-------------------------------------------------------------- */
 .showcase-section {
   padding: 4.5rem 0 4rem;
 }
@@ -676,9 +667,6 @@ button {
   margin-top: 2px;
 }
 
-/* -------------------------------------------------------------
-   PROJECTS SECTION (16 CARDS)
-------------------------------------------------------------- */
 .projects-section {
   padding: 5rem 0;
   border-top: 1px solid var(--border-subtle);
@@ -873,9 +861,6 @@ button {
   border: 1px solid var(--border-subtle);
 }
 
-/* -------------------------------------------------------------
-   STANDARDS SECTION
-------------------------------------------------------------- */
 .standards-section {
   padding: 5rem 0;
   border-top: 1px solid var(--border-subtle);
@@ -924,9 +909,6 @@ button {
   line-height: 1.6;
 }
 
-/* -------------------------------------------------------------
-   CONTACT SECTION (CLEAN - ZERO OPINIONS)
-------------------------------------------------------------- */
 .contact-block-section {
   padding: 5rem 0 5.5rem;
 }
@@ -1119,9 +1101,6 @@ button {
   color: #ffffff;
 }
 
-/* -------------------------------------------------------------
-   MAP SECTION
-------------------------------------------------------------- */
 .map-section {
   padding: 0 0 5rem;
 }
@@ -1251,9 +1230,6 @@ button {
   z-index: 5;
 }
 
-/* -------------------------------------------------------------
-   FOOTER
-------------------------------------------------------------- */
 .site-footer-arch {
   padding: 2.75rem 0 3rem;
   border-top: 1px solid var(--border-subtle);
@@ -1269,9 +1245,6 @@ button {
   gap: 1.5rem;
 }
 
-/* -------------------------------------------------------------
-   MOBILE STICKY BOTTOM ACTION BAR (FOR PHONES)
-------------------------------------------------------------- */
 .mobile-sticky-bar {
   display: none;
   position: fixed;
@@ -1312,9 +1285,6 @@ button {
   flex-shrink: 0;
 }
 
-/* -------------------------------------------------------------
-   LIGHTBOX MODAL
-------------------------------------------------------------- */
 .lightbox-modal {
   position: fixed;
   inset: 0;
@@ -1421,9 +1391,6 @@ button {
   line-height: 1.5;
 }
 
-/* -------------------------------------------------------------
-   SCROLL ENTRANCE ANIMATIONS
-------------------------------------------------------------- */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(24px);
@@ -1448,9 +1415,6 @@ button {
   transform: translateY(0);
 }
 
-/* -------------------------------------------------------------
-   RESPONSIVE OPTIMIZATIONS (TABLETS & DESKTOPS)
-------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .showcase-split-grid {
     grid-template-columns: 1fr;
@@ -1475,12 +1439,9 @@ button {
   }
 }
 
-/* -------------------------------------------------------------
-   RESPONSIVE OPTIMIZATIONS (PHONES < 768px)
-------------------------------------------------------------- */
 @media (max-width: 768px) {
   body {
-    padding-bottom: 74px; /* clearance for mobile-sticky-bar */
+    padding-bottom: 74px;
   }
 
   .nav-menu-links {
@@ -1637,9 +1598,6 @@ button {
   }
 }
 
-/* -------------------------------------------------------------
-   RESPONSIVE OPTIMIZATIONS (SMALL PHONES < 480px)
-------------------------------------------------------------- */
 @media (max-width: 480px) {
   .brand-title-sub {
     display: none;
@@ -1667,9 +1625,6 @@ button {
   }
 }
 
-/* -------------------------------------------------------------
-   ACCESSIBILITY: PREFERS REDUCED MOTION
-------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
