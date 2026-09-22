@@ -10,15 +10,12 @@ if (!fs.existsSync(IMAGES_DIR)) {
   fs.mkdirSync(IMAGES_DIR, { recursive: true });
 }
 
-// Body parsers for file uploads (base64 JSON)
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-// Serwowanie plików statycznych z folderu images oraz głównego katalogu
 app.use('/images', express.static(IMAGES_DIR));
 app.use(express.static(path.join(__dirname)));
 
-// API zwracające listę wgranych zdjęć realizacji
 app.get('/api/images', (req, res) => {
   try {
     const list = [];
@@ -30,7 +27,6 @@ app.get('/api/images', (req, res) => {
         }
       });
     }
-    // Sprawdź również główny katalog pod kątem plików image*.png
     const rootFiles = fs.readdirSync(__dirname);
     rootFiles.forEach(f => {
       if (/^image.*\.(jpg|jpeg|png|webp)$/i.test(f)) {
@@ -43,7 +39,6 @@ app.get('/api/images', (req, res) => {
   }
 });
 
-// API do wgrywania zdjęć z wizytówki / dysku do folderu images
 app.post('/api/upload', (req, res) => {
   try {
     const { filename, base64 } = req.body;
@@ -61,7 +56,6 @@ app.post('/api/upload', (req, res) => {
   }
 });
 
-// Fallback dla innych ścieżek - odsyłamy do index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -69,5 +63,3 @@ app.get('*', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Serwer działa poprawnie! Możesz otworzyć stronę pod adresem http://0.0.0.0:${PORT}`);
 });
-
-
